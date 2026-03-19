@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshun Jolly Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Revue&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Revue', sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: #e0e0e0;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url("port.png") center center / cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero .content h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .hero .menu {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .hero .menu a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #eaeaea;
+            transition: color 0.3s;
+        }
+
+        .hero .menu a:hover {
+            color: #00d9ff;
+        }
+
+        .hero .contact {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.95rem;
+            color: #ccc;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero .contact a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: rgba(28, 28, 28, 0.85);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #e0e0e0;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #80cbc4;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 0;
+            background: rgba(18, 18, 18, 0.85);
+            border-radius: 20px;
+        }
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile h2 {
+            margin-top: 20px;
+            font-size: 1.8em;
+        }
+
+        .about, .projects, .contact {
+            margin-top: 60px;
+        }
+
+        .about h2, .projects h2, .contact h2 {
+            font-size: 2.2em;
+            color: #80cbc4;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about p, .contact p {
+            font-size: 1.1em;
+            text-align: center;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-tile {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 217, 255, 0.4);
+        }
+
+        .project-tile a {
+            text-decoration: none;
+            color: #80cbc4;
+            font-size: 1.2em;
+            display: block;
+        }
+
+        footer {
+            background-color: rgba(31, 31, 31, 0.8);
+            color: #ccc;
+            padding: 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>AKSHUN JOLLY</h1>
+        <div class="menu">
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </div>
+    <div class="contact">
+        <p>Email: <a href="mailto:akshunjolly@gmail.com">akshunjolly@gmail.com</a> |
+           LinkedIn: <a href="https://www.linkedin.com/in/akshun-jolly-8b8599256" target="_blank">Profile</a> |
+           Phone: <a href="tel:+918219618569">8219618569</a></p>
+    </div>
+</section>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <section id="about" class="about">
+        <div class="profile">
+            <h2>Akshun Jolly</h2>
+            <p>A multidisciplinary professional passionate about creating secure, data-driven, and user-focused digital experiences. With a strong foundation in cybersecurity, UI/UX, digital marketing, and analytics, I aim to deliver high-impact solutions with precision and purpose.</p>
+        </div>
+    </section>
+
+       <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+
+        <!-- WiFi Security Audit Dashboard -->
+        <div class="project-tile" onclick="window.location.href='https://expert-teal-83559039.figma.site/'" style="cursor:pointer;">
+            <strong>WiFi Security Audit Dashboard</strong>
+            <p>
+                An interactive cybersecurity dashboard designed to visualize WiFi network vulnerabilities,
+                connected devices, and security risks. Focuses on real-time monitoring and audit reporting.
+            </p>
+        </div>
+
+        <!-- Digital Analysis Project -->
+        <div class="project-tile" onclick="window.location.href='https://quill-pace-48998754.figma.site/'" style="cursor:pointer;">
+            <strong>Digital Analysis Platform</strong>
+            <p>
+                A login-based analytics interface that demonstrates user authentication and digital data analysis.
+                Designed to track user activity, system performance, and interaction insights.
+            </p>
+        </div>
+
+        <!-- Health & Wellness Website -->
+        <div class="project-tile" onclick="window.location.href='https://hot-hut-65075906.figma.site/login'" style="cursor:pointer;">
+            <strong>Health & Wellness Website</strong>
+            <p>
+                A clean and responsive wellness platform focused on delivering health-related content with a
+                user-friendly interface and smooth navigation experience.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate, work with me, or have any inquiries, feel free to reach out:</p>
+        <ul>
+            <li>Email: <a href="mailto:akshunjolly@gmail.com">akshunjolly@gmail.com</a></li>
+            <li>Phone: <a href="tel:8219618569">8219618569</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/akshun-jolly-8b8599256" target="_blank">akshun-jolly</a></li>
+        </ul>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Akshun Jolly. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
